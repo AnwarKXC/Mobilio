@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div
-			class="mt-[250px] mb-[100px] lg:h-[340vh] grid relative  lg:grid-cols-2 lg:grid-rows-2  gap-10 -z-50">
+			class="mt-[250px] mb-[100px] lg:h-[360vh] grid relative  lg:grid-cols-2 lg:grid-rows-2  gap-10 -z-50">
 			<div ref="sticky_text_one" class="lg:sticky max-lg:hidden top-[15%] self-start  -z-50 ">
 				<div class="hero_heading">
 					The professional way to connect
