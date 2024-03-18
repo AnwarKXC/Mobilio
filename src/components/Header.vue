@@ -13,7 +13,7 @@
 								alt="" class="rotate-180"></span>
 					</div>
 					<div v-if=" i.nested "
-						class=" absolute top-5  hidden group-hover:block z-50 duration-300   pt-2.5">
+						class=" absolute top-5 center_absloute hidden group-hover:block z-50 duration-300   pt-2.5">
 						<div class="bg-white rounded-md grid md:min-w-[373px] overflow-hidden"
 							:class=" i.name == 'More' ? ' md:grid-cols-2 md:min-w-[746px]' : ' ' ">
 							<div
@@ -143,3 +143,11 @@ const navLinks = [
 
 
 </script>
+
+<style>
+.center_absloute {
+	right: 0%;
+	left: auto;
+	transform: translate(50% );
+}
+</style>
