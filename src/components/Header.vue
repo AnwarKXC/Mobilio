@@ -4,20 +4,23 @@
 			<a href="/">
 				<img src="/logo.svg" alt="" class="lg:max-w-[100px] h-8">
 			</a>
-			<nav class="max-lg:hidden cent lg:gap-12 gap-6 ">
-				<a v-for="         i         in         navLinks        " :key=" i.name " href=""
+			<nav class="max-lg:hidden cent lg:gap-12 gap-4 ">
+				<a v-for="           i           in           navLinks          " :key=" i.name " href=""
 					class=" relative group ">
 					<div class="cent gap-2">
-						<span class="">{{ i.name }}</span> <span v-if=" i.nested "><img
+						<span class="">{{ i.name }}</span>
+						<span v-if=" i.nested " class="shrink-0">
+							<img
 								src="https://assets-global.website-files.com/60b64e5e7e0ea41f8673bebb/629a0bac4f71e36b3588c799_Vector.svg"
-								alt="" class="rotate-180"></span>
+								alt="" class="rotate-180">
+						</span>
 					</div>
 					<div v-if=" i.nested "
-						class=" absolute top-5 center_absloute hidden group-hover:block z-50 duration-300   pt-2.5">
+						class=" absolute top-5 center_absloute hidden group-hover:block z-50 duration-300   pt-3">
 						<div class="bg-white rounded-md grid md:min-w-[373px] overflow-hidden"
 							:class=" i.name == 'More' ? ' md:grid-cols-2 md:min-w-[746px]' : ' ' ">
 							<div
-								v-for="                j                 in                  i.nested                "
+								v-for="                  j                   in                    i.nested                  "
 								:key=" j.title "
 								class="flex items-center group/list gap-4 p-4 py-5 hover:bg-[#f8f8f8] duration-300 md:min-w-[373px]">
 								<div
@@ -146,8 +149,8 @@ const navLinks = [
 
 <style>
 .center_absloute {
-	right: 0%;
+	right: 0;
 	left: auto;
-	transform: translate(50% );
+	transform: translate(45%);
 }
 </style>

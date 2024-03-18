@@ -92,7 +92,6 @@ const resetStyles = () => {
 // Function to update scroll position and handle animations
 const styleAnimation = () => {
 	let scrollDiff = scrollY - lastScrollY
-	console.log( scrollY > lastScrollY ? 'Scrolling down' : 'Scrolling up', scrollDiff )
 
 	if ( scrollY > lastScrollY ) {
 		isScrollingDown = true
