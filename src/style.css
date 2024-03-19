@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-   @apply bg-primary text-white  ;
+   @apply bg-primary text-white;
    font-family: "DM Sans", sans-serif;
 }
-.container{
-@apply max-w-[1192px]
+.container {
+   @apply max-w-[1192px];
 }
 .cent {
    @apply flex justify-center items-center;
@@ -26,13 +26,14 @@ html {
    padding-block: 20px 30px;
    margin-top: 40px;
    letter-spacing: 0.025em;
-   @apply max-lg:flex justify-center items-center max-lg:text-center text-[32px] md:text-[48px] lg:text-[64px] leading-[42px] md:leading-[62px] lg:leading-[84px]
+   @apply max-lg:flex justify-center items-center max-lg:text-center text-[32px] md:text-[48px] lg:text-[64px] leading-[42px] md:leading-[62px] lg:leading-[84px];
 }
 .hero_subheading {
    color: rgba(255, 255, 255, 0.7);
    font-size: 24px;
    line-height: 36px;
    margin-bottom: 60px;
+   @apply md:text-[21px] lg:text-[24px] leading-[24px] md:leading-[32px] lg:leading-[36px];
 }
 
 ::-webkit-scrollbar {

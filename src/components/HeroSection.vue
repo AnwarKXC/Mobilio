@@ -12,7 +12,7 @@
 			</h2>
 		</div>
 		<div class="lg:sticky top-[6%] w-full">
-			<div class="relative fade-in lg:mb-20 md:min-h-10 lg:min-h-[400px] z-50 ">
+			<div class="relative fade-in lg:mb-20 md:min-h-10 lg:min-h-[450px] z-50 ">
 
 				<img
 					src="https://assets-global.website-files.com/60b64e5e7e0ea41f8673bebb/62f695949570fe305adab58b_card_03_small-p-500.webp"
@@ -23,28 +23,35 @@
 			</div>
 		</div>
 		<div
-			class="mt-[250px] mb-[100px] lg:h-[360vh] grid relative  lg:grid-cols-2 lg:grid-rows-2  gap-10 -z-50">
-			<div ref="sticky_text_one" class="lg:sticky max-lg:hidden top-[15%] self-start  -z-50 ">
+			class="mt-[250px] mb-[70px] lg:h-[300vh] grid relative  lg:grid-cols-2 lg:grid-rows-2  gap-10 -z-50">
+			<div ref="sticky_text_one"
+				class="lg:sticky  top-[15%] self-start  -z-50 max-w-[500px] mx-auto ">
 				<div class="hero_heading">
 					The professional way to connect
 				</div>
-				<div class="hero_subheading">
+				<div class="hero_subheading max-lg:text-center">
 					Not just for in-person meetings, but also for online networking and virtual events.
 					<br>
 					<br>
 					Compatible with all modern smartphones, Apple and Android.
 				</div>
 			</div>
-			<div class=" justify-self-end relative row-span-2  max-lg:hidden ">
+			<div class=" lg:justify-self-end justify-self-center relative row-span-2   ">
 				<div class="lg:sticky top-[10%]">
-					<img src="/mobile.svg" class="lg:max-h-[600px] xl:max-h-[650px]" alt=" phone"
-						ref="mobile" />
-					<img src="/mobile-check.svg" class="lg:max-h-[600px] xl:max-h-[650px]" alt=" phone"
+
+					<img src="/mobile.svg" class="lg:max-h-[600px] xl:max-h-[650px] " alt=" phone"
+						ref="mobile" style="display:none;" />
+
+
+					<img src="/mobile-check.svg" class="lg:max-h-[600px] xl:max-h-[650px] " alt=" phone"
 						ref="mobileCheck" style="display:none;" />
+
 					<img src="/mobile-true.svg" class="lg:max-h-[600px] xl:max-h-[650px]" alt=" phone"
 						ref="mobileTrue" style="display:none" />
-					<img src="/mobile-completed.svg" class="lg:max-h-[600px] xl:max-h-[650px]"
-						alt=" phone" ref="mobileCompleted" style="display:none;" />
+
+					<img src="/mobile-completed.svg" class="lg:max-h-[600px] xl:max-h-[650px] lg:hidden"
+						alt=" phone" ref="mobileCompleted" />
+
 					<div ref="mobileCompleted_circle" class=" absolute top-[35%] -z-50 circle "
 						style=" display:none; "></div>
 				</div>
@@ -132,12 +139,12 @@ const styleAnimation = () => {
 			lg: sticky_text_one.value.style.opacity = 1
 			break
 		case scrollY >= 2.7:
-			let bottomValue = `${ ( scrollY - 1.5 ) * 40 }%`
-			let opacity = 1 - ( ( scrollY - 2.7 ) * 1.35 )
+			let bottomValue = `${ ( scrollY - 1.5 ) * 50 }%`
+			let opacity = 1 - ( ( scrollY - 2.6 ) * 1.35 )
 			animatedImage.value.style.transform = `perspective(${ 500 + ( scrollY * 7 ) }px) scale(${ 1 - ( ( ( scrollY ) - 2.5 ) * 0.5 ) }) rotateY(-${ scrollY * 4 }deg) skew(-${ scrollY / 2 }deg, -${ scrollY / 2 }deg)`
 			animatedImage.value.style.bottom = bottomValue
 			animatedImage.value.style.opacity = opacity < 0 ? 0 : opacity
-			lg: sticky_text_one.value.style.opacity = ( 1 - ( ( scrollY - 2.3 ) * 1.6 ) ) < 0 ? 0 : ( 1 - ( ( scrollY - 2.3 ) * 1.6 ) )
+			lg: sticky_text_one.value.style.opacity = ( 1 - ( ( scrollY - 2.3 ) * 1.65 ) ) < 0 ? 0 : ( 1 - ( ( scrollY - 2.3 ) * 1.65 ) )
 			mobileTrue.value.style.display = 'none'
 			mobile.value.style.display = 'none'
 			mobileCompleted.value.style.display = 'block'
