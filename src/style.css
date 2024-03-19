@@ -30,8 +30,6 @@ html {
 }
 .hero_subheading {
    color: rgba(255, 255, 255, 0.7);
-   font-size: 24px;
-   line-height: 36px;
    margin-bottom: 60px;
    @apply md:text-[21px] lg:text-[24px] leading-[24px] md:leading-[32px] lg:leading-[36px];
 }
